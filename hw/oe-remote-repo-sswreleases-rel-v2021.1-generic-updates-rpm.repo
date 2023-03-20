@@ -1,0 +1,60 @@
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-all]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm all
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/all
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-any]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm any
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/any
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-noarch]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm noarch
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/noarch
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-aarch64]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm aarch64
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/aarch64
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-armv8a]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm armv8a
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/armv8a
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-armv8a_crc]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm armv8a_crc
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/armv8a_crc
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-cortexa72_cortexa53]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm cortexa72_cortexa53
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/cortexa72_cortexa53
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-zynqmp]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm zynqmp
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/zynqmp
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-zynqmp_ev]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm zynqmp_ev
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/zynqmp_ev
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-k26]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm k26
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/k26
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-zynqmp_generic]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm zynqmp_generic
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/zynqmp_generic
+gpgcheck=0
+
+[oe-remote-repo-sswreleases-rel-v2021.1-generic-updates-rpm-k26_kv]
+name=OE Remote Repo: sswreleases rel-v2021.1 generic-updates rpm k26_kv
+baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic-updates/rpm/k26_kv
+gpgcheck=0
+

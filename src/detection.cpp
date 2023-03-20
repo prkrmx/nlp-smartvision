@@ -48,6 +48,8 @@
 
 #include "global_var.h"
 
+#define DEBUG
+
 static char *msgFirmware = (char *)"Please make sure that the kv260-nlp-smartvision accelerator firmware is loaded via xmutil.\n";
 
 static std::string mipidev("");
@@ -216,12 +218,22 @@ void Detection()
 		if (strcmp("isp_vcap_csi", mipi_type.c_str()) == 0)
 		{
 			std::cout << "isp ";
+
+#ifdef DEBUG
+			tmp = "/home/petalinux/ref/nlp-smartvision/script/init-isp-smartvision.sh '" + mipimediadev + "'";
+#else
 			tmp = "init-isp-smartvision.sh '" + mipimediadev + "'";
+#endif
 		}
 		else
 		{
 			std::cout << "imx ";
+#ifdef DEBUG
+			tmp = "/home/petalinux/ref/nlp-smartvision/script/init-imx-smartvision.sh '" + mipimediadev + "'";
+#else
 			tmp = "init-imx-smartvision.sh '" + mipimediadev + "'";
+#endif
+			
 		}
 		std::cout << "node for RGB/1024x768 pipeline \n" ;
 				//  << tmp << std::endl;
@@ -241,9 +253,15 @@ void Detection()
 		image_off = cv::Mat(768, 1024, CV_8UC3, cv::Scalar(0, 0, 0));
 	}
 
+#ifdef DEBUG
+	auto ml_task = vitis::ai::FaceDetect::create("/home/petalinux/ref/nlp-smartvision/models/kv260/densebox_640_360/densebox_640_360.xmodel");
+	auto ml_task_1 = vitis::ai::YOLOv2::create("/home/petalinux/ref/nlp-smartvision/models/kv260/yolov2_voc_pruned_0_77/yolov2_voc_pruned_0_77.xmodel");
+	auto ml_task_2 = vitis::ai::PlateDetect::create("/home/petalinux/ref/nlp-smartvision/models/kv260/plate_detect/plate_detect.xmodel");
+#else
 	auto ml_task = vitis::ai::FaceDetect::create("/opt/xilinx/kv260-nlp-smartvision/share/vitis_ai_library/models/densebox_640_360/densebox_640_360.xmodel");
 	auto ml_task_1 = vitis::ai::YOLOv2::create("/opt/xilinx/kv260-nlp-smartvision/share/vitis_ai_library/models/yolov2_voc_pruned_0_77/yolov2_voc_pruned_0_77.xmodel");
 	auto ml_task_2 = vitis::ai::PlateDetect::create("/opt/xilinx/kv260-nlp-smartvision/share/vitis_ai_library/models/plate_detect/plate_detect.xmodel");
+#endif
 
 	cv::Mat cur_frame;
 	auto t_1 = std::chrono::steady_clock::now();

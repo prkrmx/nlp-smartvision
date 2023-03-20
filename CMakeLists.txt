@@ -19,8 +19,8 @@ cmake_minimum_required(VERSION 3.5)
 project(nlp-smartvision)
 
 SET(CMAKE_INSTALL_PREFIX $ENV{OECORE_TARGET_SYSROOT})
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__USE_XOPEN2K8 -DENABLE_PRECOMPILED_HEADERS=OFF -g -Wall -O2 -fpermissive -fmessage-length=0 -rdynamic -Wl,--no-undefined -Wno-narrowing" )
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -std=c++17")
+# SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__USE_XOPEN2K8 -DENABLE_PRECOMPILED_HEADERS=OFF -g -Wall -O2 -fpermissive -fmessage-length=0 -rdynamic -Wl,--no-undefined -Wno-narrowing" )
+# SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -std=c++17")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -I ${CMAKE_SOURCE_DIR}/src/")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")

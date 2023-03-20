@@ -233,7 +233,7 @@ static int setup_chmap(void)
 		return 0;
 	}
 
-	hw_map = calloc(hwparams.channels, sizeof(int));
+	hw_map = (unsigned int*)calloc(hwparams.channels, sizeof(int));
 	if (!hw_map) {
 		printf("not enough memory");
 		free(hw_chmap);
@@ -430,7 +430,7 @@ static void set_params(void)
 	//cout << "chunk size" << chunk_size << endl;
 	//cout << "chunk bytes" << chunk_bytes << endl;
 	//
-	audiobuf = realloc(audiobuf, chunk_bytes);
+	audiobuf = (u_char*)realloc(audiobuf, chunk_bytes);
 	if (audiobuf == NULL) {
 		printf("not enough memory");
 		prg_exit(EXIT_FAILURE);
@@ -855,12 +855,12 @@ void Capture_Audio()
 
 	if (err < 0) {
 		printf("audio open error: %s\n\n", snd_strerror(err));
-		return 1;
+		return ;
 	}
 
 	if ((err = snd_pcm_info(handle, info)) < 0) {
 		printf("info error: %s", snd_strerror(err));
-		return 1;
+		return ;
 	}
 	
 	chunk_size = 2*window_size;
@@ -869,7 +869,7 @@ void Capture_Audio()
 	audiobuf = (u_char *)malloc(chunk_size);
 	if (audiobuf == NULL) {
 		printf("not enough memory");
-		return 1;
+		return ;
 	}
 
 	writei_func = snd_pcm_writei;

@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "pulseaudio_cmd",
+        "type": "shell",
+        "command": "pulseaudio -D >>/dev/null 2> /dev/null"
+      }
+    ]
+  }
